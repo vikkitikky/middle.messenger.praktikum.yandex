@@ -1,5 +1,8 @@
-<div>
-	{{> Title title=title tag=titleTag}}
-	{{> Title title=subtitle tag=subtitleTag}}
+<div class="error-page">
+	{{> Icon svgContent=svg }}
+	<div class="error-page__title">
+		{{> Title size=titleSize title=title variant=titleVariant tag=titleTag}}
+		{{> Title size=subtitleSize title=subtitle variant=subtitleVariant tag=subtitleTag}}
+	</div>
 	{{> Link link=goBack linkContent=linkContent}}
 </div>
