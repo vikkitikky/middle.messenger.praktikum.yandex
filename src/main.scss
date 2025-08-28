@@ -1,0 +1,11 @@
+@use "./components/title/styles.scss" as Title;
+@use "./pages/error/styles.scss" as ErrorPage;
+
+body {
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+
+  @supports (min-height: 100dvh) {
+    height: 100dvh;
+  }
+}
