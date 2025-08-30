@@ -1,0 +1,10 @@
+@use "../../components/organisms/Sidebar/styles.scss" as Sidebar;
+@use "../../components/organisms/Chat/styles.scss" as Chat;
+
+.chats-page {
+  display: flex;
+
+  .chat {
+    flex: 1;
+  }
+}

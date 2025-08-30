@@ -1,0 +1,41 @@
+@mixin title-size($size) {
+  @if $size == large {
+    font-size: 28px;
+    line-height: 36px;
+  } @else if $size == medium {
+    font-size: 24px;
+    line-height: 32px;
+  } @else if $size == small {
+    font-size: 20px;
+    line-height: 28px;
+  } @else {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@mixin title-variant($color) {
+  color: $color;
+}
+
+.title {
+  &_large {
+    @include title-size(large);
+  }
+  &_medium {
+    @include title-size(medium);
+  }
+  &_small {
+    @include title-size(small);
+  }
+
+  &_secondary {
+    color: #757575;
+  }
+  &_tertiary {
+    color: #B3B3B3;
+  }
+  &_default {
+    color: #1E1E1E;
+  }
+}

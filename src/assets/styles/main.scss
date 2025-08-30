@@ -1,0 +1,36 @@
+@use "./reset.scss" as *;
+@use "../../pages/sign/styles.scss" as SignPage;
+@use "../../pages/error/styles.scss" as ErrorPage;
+@use "../../pages/chats/styles.scss" as ChatPage;
+@use "../../pages/settings/styles.scss" as SettingsPage;
+@use "../../components/organisms/navBlock/styles.scss" as NavBlock;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+#app {
+  height: 100vh;
+
+  @supports (height: 100dvh) {
+    height: 100dvh;
+  }
+
+  .page {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+}
