@@ -1,0 +1,18 @@
+.text {
+  &_default {
+    color: #1a1a1a;
+  }
+  &_secondary {
+    color: #6c757d;
+  }
+
+  &_small {
+    font-size: 12px;
+  }
+  &_medium {
+    font-size: 16px;
+  }
+  &_large {
+    font-size: 20px;
+  }
+}
