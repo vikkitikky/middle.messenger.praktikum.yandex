@@ -1,0 +1,5 @@
+{{#if avatarSrc}}
+	<img src="{{avatarSrc}}" class="avatar avatar_img {{className}}" alt="{{avatarAlt}}" />
+{{else}}
+	<span style="--avatar-bg-color: {{avatarColor}}" class="avatar avatar_bkg {{className}}">{{personInitials}}</span>
+{{/if}}

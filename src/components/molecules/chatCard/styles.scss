@@ -1,0 +1,39 @@
+@use "../../atoms/avatar/styles.scss" as Avatar;
+
+.chat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 4px;
+
+
+  &__avatar {
+    display: flex;
+    min-width: 36px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__header {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__message {
+    font-size: 14px;
+    color: #333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    word-break: break-word;
+  }
+}

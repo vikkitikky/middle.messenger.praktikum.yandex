@@ -1,0 +1,8 @@
+{{#page context=this className="error"}}
+	{{#modal id="error" contentClassName="error-content"}}
+		{{> Image alt=errorImageAlt src=errorImage className="image_error"}}
+		{{> Title title=title size=titleSize }}
+		{{> Text textContent=errorDescription }}
+		{{#link className="link_text" id="back-to-chats" path="/chats"}}Chats{{/link}}
+	{{/modal}}
+{{/page}}

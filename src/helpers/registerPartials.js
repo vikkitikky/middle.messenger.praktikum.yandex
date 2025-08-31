@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars'
 
-const partials = import.meta.glob('../components/**/*.hbs', {
+const partials = import.meta.glob('../components/atoms/**/*.hbs', {
   query: '?raw',
   import: 'default',
   eager: true,

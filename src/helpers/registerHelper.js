@@ -1,10 +1,10 @@
 import Handlebars from 'handlebars'
+import { utils } from '../utils/utils.js'
 
-export function registerHelpers(helpers = []) {
-  Handlebars.registerHelper('default', (value, defaultValue) => {
-    return value != null ? value : defaultValue;
-  });
-  helpers.forEach(helper => {
-    Handlebars.registerHelper(helper.name, helper.fn)
-  })
+export function registerHelpers() {
+  for (const [name, fn] of Object.entries(utils)) {
+    if (typeof name === 'string' && typeof fn === 'function') {
+      Handlebars.registerHelper(name, fn)
+    }
+  }
 }

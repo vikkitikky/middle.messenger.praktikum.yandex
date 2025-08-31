@@ -1,0 +1,13 @@
+{{#page context=this className="sign-page"}}
+	{{#modal id=modalId contentClassName="sign-modal"}}
+		{{> Image alt="bubble-chat" src="/bubble.png" className="image_logo"}}
+		{{> Title title=title size=size }}
+		{{#form id=formId className="sign-form"}}
+			{{#each inputs}}
+				{{> Input placeholder=placeholder type=type name=name }}
+			{{/each}}
+			{{> Button type="submit" name=buttonName content=buttonTitle size="medium" }}
+			{{#link className="link_text" id=linkId path=link}}{{linkTitle}}{{/link}}
+		{{/form}}
+	{{/modal}}
+{{/page}}
