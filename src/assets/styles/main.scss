@@ -1,12 +1,41 @@
 @use "./reset.scss" as *;
+@use "../../components/atoms/text/styles.scss" as Text;
 @use "../../pages/sign/styles.scss" as SignPage;
 @use "../../pages/error/styles.scss" as ErrorPage;
 @use "../../pages/chats/styles.scss" as ChatPage;
 @use "../../pages/settings/styles.scss" as SettingsPage;
 @use "../../components/organisms/navBlock/styles.scss" as NavBlock;
 
+$scroll-thumb-color: #bf857a;
+$scroll-track-color: #f0f0f0;
+$scroll-width: 8px;
+
 body {
   font-family: "Inter", sans-serif;
+  ::-webkit-scrollbar {
+    width: $scroll-width;
+    height: $scroll-width;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $scroll-track-color;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $scroll-thumb-color;
+    border-radius: 4px;
+    border: 2px solid $scroll-track-color;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: darken($scroll-thumb-color, 10%);
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: $scroll-thumb-color $scroll-track-color;
+  }
 }
 
 .visually-hidden {

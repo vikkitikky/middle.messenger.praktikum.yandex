@@ -2,13 +2,15 @@
 	{{> Avatar avatarColor=avatarColor personInitials=initials className="chat-card__avatar"}}
 	<div class="chat-card__content">
 		<div class="chat-card__header">
-			{{> Title tag="h4" size="small" title=username}}
-			{{> Text tag="span" textContent=(formatDate time)}}
+			<span>{{> Text tag="b" variant="secondary" textContent=username}}</span>
+			{{> Text tag="span" size="small" variant="secondary" textContent=(formatDate time)}}
 		</div>
 		{{#if (equals lastMessageFrom "owner")}}
-			{{> Text textContent=lastMessage className="chat-card__message"}}
+			{{> Text size="small" variant="secondary" textContent=lastMessage className="chat-card__message"}}
 		{{else}}
-			<p class="chat-card__message">{{> Text tag="b" textContent=username}} {{lastMessage}}</p>
+			<p class="chat-card__message">
+				{{> Text variant="secondary" tag="b" size="small" textContent=(concatString username ":")}} {{> Text tag="span" variant="secondary" size="small" textContent=lastMessage}}
+			</p>
 		{{/if}}
 	</div>
 {{/link}}
