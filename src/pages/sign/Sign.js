@@ -2,7 +2,7 @@ import Handlebars from 'handlebars'
 import SignInPage from './Sign.hbs?raw'
 import inputHandler from '../../components/atoms/input/inputHandler.js'
 import buttonHandler from '../../components/atoms/button/buttonHandler.js'
-import Link from '../../components/atoms/link/Link.js';
+import Link from '../../components/atoms/link/Link.js'
 
 const template = Handlebars.compile(SignInPage)
 

@@ -1,4 +1,4 @@
-import Link from '../../atoms/link/Link.js';
+import Link from '../../atoms/link/Link.js'
 
 export default function ({ chatId, navigate }) {
   Link({

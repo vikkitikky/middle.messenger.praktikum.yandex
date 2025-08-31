@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars'
 import NavBlock from './NavBlock.hbs?raw'
-import Link from '../../atoms/link/Link.js';
+import Link from '../../atoms/link/Link.js'
 
 const template = Handlebars.compile(NavBlock)
 

@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars'
 import ErrorPage from './Error.hbs?raw'
-import Link from '../../components/atoms/link/Link.js';
+import Link from '../../components/atoms/link/Link.js'
 
 const template = Handlebars.compile(ErrorPage)
 

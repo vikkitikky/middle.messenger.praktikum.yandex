@@ -1,7 +1,7 @@
 import Handlebars from 'handlebars'
 import SettingsPage from './Settings.hbs?raw'
-import inputHandler from '../../components/atoms/input/inputHandler.js';
-import buttonHandler from '../../components/atoms/button/buttonHandler.js';
+import inputHandler from '../../components/atoms/input/inputHandler.js'
+import buttonHandler from '../../components/atoms/button/buttonHandler.js'
 
 const template = Handlebars.compile(SettingsPage)
 
