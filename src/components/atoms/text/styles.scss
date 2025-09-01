@@ -1,9 +1,11 @@
+@use "../../../assets/styles/colors.scss" as *;
+
 .text {
   &_default {
-    color: #1a1a1a;
+    color: $color-primary-text;
   }
   &_secondary {
-    color: #6c757d;
+    color: $color-secondary-text;
   }
 
   &_small {

@@ -1,7 +1,9 @@
+@use "../../../assets/styles/colors.scss" as *;
+
 .input {
   padding: 1rem;
   border-radius: 0.375rem;
-  border: 1px solid #F5DCFFFF;
+  border: 1px solid $color-secondary-pink;
   outline: none;
   transition-property: border-color, box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -9,10 +11,10 @@
   box-sizing: border-box;
 
   &:hover {
-    border-color: #d682ff;
+    border-color: $color-hover-secondary-pink;
   }
 
   &:focus {
-    box-shadow: 0 0 1px 1px #d682ff;
+    box-shadow: 0 0 1px 1px $color-active-secondary-pink;
   }
 }

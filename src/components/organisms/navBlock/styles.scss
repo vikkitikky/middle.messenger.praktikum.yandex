@@ -1,12 +1,14 @@
+@use "../../../assets/styles/colors.scss" as *;
+
 .nav-block-wrapper {
   position: absolute;
   top: 25%;
   right: 0;
-  background-color: snow;
+  background-color: $color-snow;
   border-radius: 8px 0 0 8px;
   padding: 12px;
   opacity: 45%;
-  border: 3px dotted rgba(255, 99, 71, 0.5);
+  border: 3px dotted $color-secondary-tomato;
   border-right: none;
   z-index: 999;
 

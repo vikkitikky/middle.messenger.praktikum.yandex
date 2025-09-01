@@ -1,7 +1,7 @@
-{{#page context=this className="error"}}
+{{#page context=this className="error" tag="main"}}
 	{{#modal id="error" contentClassName="error-content"}}
 		{{> Image alt=errorImageAlt src=errorImage className="image_error"}}
-		{{> Title title=title size=titleSize }}
+		{{> Title tag="h2" title=title size=titleSize }}
 		{{> Text variant="secondary" textContent=errorDescription }}
 		{{#link className="link_text" id="back-to-chats" path="/chats"}}
 			{{> Text variant="secondary" textContent="Chats" }}

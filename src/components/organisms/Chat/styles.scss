@@ -1,3 +1,5 @@
+@use "../../../assets/styles/colors.scss" as *;
+
 .chat {
   position: relative;
   &::before {
@@ -11,6 +13,6 @@
   }
 
   .modal-content {
-    background-color: snow;
+    background-color: $color-snow;
   }
 }

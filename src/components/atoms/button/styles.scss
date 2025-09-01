@@ -1,3 +1,5 @@
+@use "../../../assets/styles/colors.scss" as *;
+
 .btn {
   border: none;
   border-radius: 8px;
@@ -7,28 +9,28 @@
   }
 
   &_primary {
-    background-color: #e090c8;
-    color: #ffffff;
+    background-color: $color-primary-pink;
+    color: $color-white;
 
     &:hover {
-      background-color: #d47ab8;
+      background-color: $color-hover-primary-pink;
     }
 
     &:active {
-      background-color: #c463a6;
+      background-color: $color-active-primary-pink;
     }
   }
 
   &_secondary {
-    background-color: #f3d6e6;
-    color: #e090c8;
+    background-color: $color-secondary-pink;
+    color: $color-primary-pink;
 
     &:hover {
-      background-color: #e7bad6;
+      background-color: $color-hover-secondary-pink;
     }
 
     &:active {
-      background-color: #dca1c2;
+      background-color: $color-active-secondary-pink;
     }
   }
 }

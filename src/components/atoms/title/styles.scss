@@ -1,3 +1,5 @@
+@use "../../../assets/styles/colors.scss" as *;
+
 @mixin title-size($size) {
   @if $size == large {
     font-size: 28px;
@@ -30,12 +32,9 @@
   }
 
   &_secondary {
-    color: #6c757d;
-  }
-  &_tertiary {
-    color: #B3B3B3;
+    color: $color-secondary-text;
   }
   &_default {
-    color: #1a1a1a;
+    color: $color-primary-text;
   }
 }
