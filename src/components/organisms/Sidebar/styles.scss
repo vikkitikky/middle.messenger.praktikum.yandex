@@ -1,4 +1,5 @@
 @use "../../molecules/chatCard/styles.scss" as ChatCard;
+@use "../../../assets/styles/colors.scss" as *;
 
 .sidebar {
   max-width: 420px;
@@ -6,13 +7,13 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  border-right: 1px dashed tomato;
+  border-right: 1px dashed $color-primary-tomato;
 
   &__header {
     display: flex;
     gap: 12px;
     align-items: center;
-    border-bottom: 1px dashed tomato;
+    border-bottom: 1px dashed $color-primary-tomato;
     height: 68px;
     padding: 0 12px;
   }
@@ -34,11 +35,11 @@
 
     &__item {
       &:not(:last-child) {
-        border-bottom: 1px dashed tomato;
+        border-bottom: 1px dashed $color-primary-tomato;
       }
 
       &:hover {
-        background-color: snow;
+        background-color: $color-snow;
       }
     }
   }

@@ -1,4 +1,5 @@
 @use "./reset.scss" as *;
+@use "./colors.scss" as Colors;
 @use "../../components/atoms/text/styles.scss" as Text;
 @use "../../pages/sign/styles.scss" as SignPage;
 @use "../../pages/error/styles.scss" as ErrorPage;
@@ -6,8 +7,6 @@
 @use "../../pages/settings/styles.scss" as SettingsPage;
 @use "../../components/organisms/navBlock/styles.scss" as NavBlock;
 
-$scroll-thumb-color: #bf857a;
-$scroll-track-color: #f0f0f0;
 $scroll-width: 8px;
 
 body {
@@ -18,23 +17,23 @@ body {
   }
 
   ::-webkit-scrollbar-track {
-    background: $scroll-track-color;
+    background: Colors.$scroll-track-color;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: $scroll-thumb-color;
+    background-color: Colors.$scroll-thumb-color;
     border-radius: 4px;
-    border: 2px solid $scroll-track-color;
+    border: 2px solid Colors.$scroll-track-color;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: darken($scroll-thumb-color, 10%);
+    background-color: Colors.$scroll-thumb-hover-color;
   }
 
   * {
     scrollbar-width: thin;
-    scrollbar-color: $scroll-thumb-color $scroll-track-color;
+    scrollbar-color: Colors.$scroll-thumb-color Colors.$scroll-track-color;
   }
 }
 
