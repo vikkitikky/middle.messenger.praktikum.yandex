@@ -1,0 +1,36 @@
+@use "../../../assets/styles/colors.scss" as *;
+
+.btn {
+  border: none;
+  border-radius: 8px;
+
+  &_medium {
+    padding: 12px;
+  }
+
+  &_primary {
+    background-color: $color-primary-pink;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-hover-primary-pink;
+    }
+
+    &:active {
+      background-color: $color-active-primary-pink;
+    }
+  }
+
+  &_secondary {
+    background-color: $color-secondary-pink;
+    color: $color-primary-pink;
+
+    &:hover {
+      background-color: $color-hover-secondary-pink;
+    }
+
+    &:active {
+      background-color: $color-active-secondary-pink;
+    }
+  }
+}

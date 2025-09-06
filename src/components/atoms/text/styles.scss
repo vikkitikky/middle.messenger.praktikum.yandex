@@ -1,0 +1,20 @@
+@use "../../../assets/styles/colors.scss" as *;
+
+.text {
+  &_default {
+    color: $color-primary-text;
+  }
+  &_secondary {
+    color: $color-secondary-text;
+  }
+
+  &_small {
+    font-size: 12px;
+  }
+  &_medium {
+    font-size: 16px;
+  }
+  &_large {
+    font-size: 20px;
+  }
+}

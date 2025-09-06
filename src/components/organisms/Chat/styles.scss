@@ -1,0 +1,18 @@
+@use "../../../assets/styles/colors.scss" as *;
+
+.chat {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/background.png");
+    background-size: 25%;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+
+  .modal-content {
+    background-color: $color-snow;
+  }
+}

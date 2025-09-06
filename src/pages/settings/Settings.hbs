@@ -1,0 +1,11 @@
+{{#page tag="main" context=this className="settings-page"}}
+	{{#modal id=modalId contentClassName="settings-modal"}}
+		{{> Avatar avatarColor="coral" personInitials="YI" className="big-avatar"}}
+		{{#form id=formId className="settings-modal"}}
+			{{#each inputs}}
+				{{> Input placeholder=placeholder type=type name=name }}
+			{{/each}}
+			{{> Button type="submit" name=buttonName content=buttonTitle size="medium" }}
+		{{/form}}
+	{{/modal}}
+{{/page}}

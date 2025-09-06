@@ -1,0 +1,15 @@
+<aside class="sidebar">
+	<div class="sidebar__header">
+		{{#link id="personalSettings" path="/settings" className="sidebar__settings-link"}}
+			{{>SlidersIcon}}
+		{{/link}}
+		{{> Input name="search" placeholder="search" type="search" className="sidebar__search"}}
+	</div>
+	<ul class="sidebar__chat-list">
+		{{#each chats}}
+			<li class="sidebar__chat-list__item">
+				{{> ChatCard id=id }}
+			</li>
+		{{/each}}
+	</ul>
+</aside>

@@ -1,0 +1,43 @@
+@use "../../../assets/styles/colors.scss" as *;
+
+.nav-block-wrapper {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  background-color: $color-snow;
+  border-radius: 8px 0 0 8px;
+  padding: 12px;
+  opacity: 45%;
+  border: 3px dotted $color-secondary-tomato;
+  border-right: none;
+  z-index: 999;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .nav-block-image {
+    width: 75px;
+    height: auto;
+  }
+
+  .nav-block {
+    margin: 0;
+    list-style: none;
+    padding-inline-start: 0;
+
+    &__item {
+      margin-top: 1rem;
+    }
+
+    &__item::before {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-right: 8px;
+      background-image: url('/rhombus.png');
+      background-size: cover;
+    }
+  }
+}

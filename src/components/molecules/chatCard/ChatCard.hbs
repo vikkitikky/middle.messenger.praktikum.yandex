@@ -1,0 +1,16 @@
+{{#link className="chat-card" path=(concatString "/chats/#" chatId) id=chatId}}
+	{{> Avatar avatarColor=avatarColor personInitials=initials className="chat-card__avatar"}}
+	<div class="chat-card__content">
+		<div class="chat-card__header">
+			<span>{{> Text tag="b" variant="secondary" textContent=username}}</span>
+			{{> Text tag="span" size="small" variant="secondary" textContent=(formatDate time)}}
+		</div>
+		{{#if (equals lastMessageFrom "owner")}}
+			{{> Text size="small" variant="secondary" textContent=lastMessage className="chat-card__message"}}
+		{{else}}
+			<p class="chat-card__message">
+				{{> Text variant="secondary" tag="b" size="small" textContent=(concatString username ":")}} {{> Text tag="span" variant="secondary" size="small" textContent=lastMessage}}
+			</p>
+		{{/if}}
+	</div>
+{{/link}}
