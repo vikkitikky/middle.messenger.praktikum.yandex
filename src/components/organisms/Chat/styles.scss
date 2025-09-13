@@ -1,18 +1,62 @@
-@use "../../../assets/styles/colors.scss" as *;
+@use '../../../assets/styles/colors.scss' as Colors;
+@use '../../../assets/styles/shadows.scss' as Shadows;
+@use '../../../assets/styles/radius.scss' as Radius;
+@use '../../atoms/button/styles.scss' as Button;
+@use '../../molecules/message/styles.scss' as Message;
 
 .chat {
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("/background.png");
-    background-size: 25%;
-    opacity: 0.1;
-    pointer-events: none;
+  background-color: Colors.$color-background-main;
+  border: 1px solid rgb(255 255 255 / 35%);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+
+  @include Shadows.outer-shadow;
+  @include Radius.round-1-5;
+
+  &__header {
+    border-bottom: 1px solid rgb(255 255 255 / 35%);
+    margin-bottom: 1rem;
+    padding: 0 1rem 0.5rem;
   }
 
-  .modal-content {
-    background-color: $color-snow;
+  &__lenta {
+    display: grid;
+    flex: 1;
+    gap: 1rem;
+    overflow-y: auto;
+    padding-top: 1rem;
+
+    .message:last-child {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__input-area {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0 1rem;
+
+    label {
+      width: 100%;
+
+      textarea {
+        background-color: Colors.$color-background-main;
+        border: none;
+        box-sizing: border-box;
+        height: auto;
+        max-height: 150px;
+        outline: 2px solid Colors.$color-transparent;
+        outline-offset: 2px;
+        overflow-y: auto;
+        padding: 0.5rem 1rem;
+        resize: none;
+        width: 100%;
+
+        @include Shadows.inner-shadow;
+        @include Radius.round-1-5;
+      }
+    }
   }
 }

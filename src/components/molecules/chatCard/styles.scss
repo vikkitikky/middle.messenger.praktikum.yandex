@@ -1,37 +1,40 @@
-@use "../../atoms/avatar/styles.scss" as Avatar;
+@use '../../atoms/avatar/styles.scss' as Avatar;
+@use '../../../assets/styles/colors.scss' as Colors;
+@use '../../../assets/styles/shadows.scss' as Shadows;
+@use '../../../assets/styles/radius.scss' as Radius;
 
 .chat-card {
-  display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 4px;
+  background-color: Colors.$color-background-main;
+  display: flex;
+  gap: 0.75rem;
+  margin: 1rem;
+  padding: 0.75rem;
 
-
-  &__avatar {
-    display: flex;
-    min-width: 36px;
-    height: 36px;
-    justify-content: center;
-    align-items: center;
-  }
+  @include Shadows.outer-shadow;
+  @include Radius.round-1;
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    justify-content: space-between;
     width: 100%;
   }
 
   &__header {
+    align-items: center;
     display: flex;
     gap: 16px;
-    align-items: center;
     justify-content: space-between;
     width: 100%;
   }
 
   &__message {
-    display: -webkit-box;
     -webkit-box-orient: vertical;
-    overflow: hidden;
+    display: -webkit-box;
     -webkit-line-clamp: 1;
-    word-break: break-word;
+    overflow: hidden;
+    overflow-wrap: break-word;
   }
 }

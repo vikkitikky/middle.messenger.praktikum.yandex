@@ -1,17 +1,21 @@
-@use "../../components/atoms/avatar/styles.scss" as Avatar;
-@use "../../components/atoms/input/styles.scss" as Input;
-@use "../../components/atoms/button/styles.scss" as Button;
-@use "../../components/atoms/link/styles.scss" as Link;
-@use "../../components/atoms/modal/styles.scss" as Modal;
-@use "../../components/atoms/form/styles.scss" as Form;
+@use '../../components/atoms/avatar/styles.scss' as Avatar;
+@use '../../components/atoms/input/styles.scss' as Input;
+@use '../../components/atoms/button/styles.scss' as Button;
+@use '../../components/atoms/link/styles.scss' as Link;
+@use '../../components/molecules/form/styles.scss' as Form;
 
 .settings-page {
-  .big-avatar {
-    width: 64px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 72px;
+
+  .settings-form {
+    max-width: 600px;
+  }
+
+  .avatar {
+    cursor: pointer;
   }
 }
