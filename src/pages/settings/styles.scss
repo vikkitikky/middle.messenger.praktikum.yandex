@@ -5,11 +5,11 @@
 @use '../../components/molecules/form/styles.scss' as Form;
 
 .settings-page {
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
   gap: 72px;
+  justify-content: center;
 
   .settings-form {
     max-width: 600px;

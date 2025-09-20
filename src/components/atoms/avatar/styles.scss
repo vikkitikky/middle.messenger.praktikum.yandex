@@ -2,34 +2,33 @@
 @use '../../../assets/styles/shadows.scss' as Shadows;
 
 .avatar {
-  display: flex;
   align-items: center;
+  display: flex;
+  font-weight: bold;
   justify-content: center;
+  overflow: hidden;
 
   @include Radius.round;
   @include Shadows.inner-shadow;
 
-  font-weight: bold;
-  overflow: hidden;
-
   &--sm {
-    width: 48px;
-    min-width: 48px;
-    height: 48px;
     font-size: 16px;
+    height: 48px;
+    min-width: 48px;
+    width: 48px;
   }
 
   &--md {
-    width: 72px;
-    min-width: 72px;
-    height: 72px;
     font-size: 20px;
+    height: 72px;
+    min-width: 72px;
+    width: 72px;
   }
 
   &--lg {
-    width: 196px;
-    min-width: 196px;
-    height: 196px;
     font-size: 28px;
+    height: 196px;
+    min-width: 196px;
+    width: 196px;
   }
 }

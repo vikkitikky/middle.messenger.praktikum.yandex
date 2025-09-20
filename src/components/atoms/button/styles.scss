@@ -3,11 +3,12 @@
 @use '../../../assets/styles/radius.scss' as Radius;
 
 .btn {
-  padding: 0.5rem 1rem;
-  font-weight: 500;
   background-color: Colors.$color-accent-purple-half;
   color: Colors.$color-background-main;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
   transition: background-color 0.3s;
+
   @include Shadows.outer-shadow;
   @include Radius.round-1;
 

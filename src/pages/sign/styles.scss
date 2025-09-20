@@ -30,14 +30,14 @@
   }
 
   .form-wrapper {
+    align-items: center;
     background-color: Colors.$color-background-main;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     max-width: 450px;
     padding: 32px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
 
     @include Shadows.outer-shadow;
     @include Radius.round-1-5;

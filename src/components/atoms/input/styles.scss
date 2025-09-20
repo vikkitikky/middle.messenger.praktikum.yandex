@@ -23,9 +23,9 @@
 }
 
 .input-error {
-  margin-top: 4px;
-  font-size: 12px;
   color: Colors.$color-error;
+  font-size: 12px;
+  margin-top: 4px;
 
   &.hidden {
     display: none;
