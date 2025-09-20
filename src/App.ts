@@ -26,6 +26,7 @@ export function initApp() {
       currentPage = new ChatsPage({ currentChatId })
     } else {
       switch (path) {
+      case '/':
       case EPaths.SIGN_UP:
         currentPage = new SignUpPage()
         break
