@@ -1,8 +1,37 @@
-@use "../../components/organisms/Sidebar/styles.scss" as Sidebar;
-@use "../../components/organisms/Chat/styles.scss" as Chat;
+@use '../../components/organisms/Sidebar/styles.scss' as Sidebar;
+@use '../../components/organisms/Chat/styles.scss' as Chat;
+@use '../../assets/styles/colors.scss' as Colors;
+@use '../../assets/styles/shadows.scss' as Shadows;
+@use '../../assets/styles/radius.scss' as Radius;
 
 .chats-page {
   display: flex;
+  gap: 1.5rem;
+
+  .sidebar {
+    max-width: 450px;
+    min-width: 320px;
+
+    &__header {
+      padding: 1rem;
+    }
+
+    .input {
+      background-color: Colors.$color-background-main;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      outline: 2px solid Colors.$color-transparent;
+      outline-offset: 2px;
+      padding: 0.5rem 1rem;
+      width: 100%;
+
+      @include Shadows.inner-shadow;
+      @include Radius.round-1;
+    }
+  }
 
   .chat {
     flex: 1;
