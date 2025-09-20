@@ -1,0 +1,40 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "@stylistic/stylelint-config"
+  ],
+  "ignoreFiles": [
+    "dist/**/*",
+    "src/assets/styles/reset.scss"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "@stylistic/indentation": 2,
+    "@stylistic/string-quotes": "single",
+    "@stylistic/color-hex-case": "lower",
+
+    "selector-class-pattern": [
+      "^[a-z0-9_-]+$",
+      {
+        "resolveNestedSelectors": true,
+        "message": "Имена классов могут содержать только строчные буквы, цифры, тире и нижнее подчёркивание"
+      }
+    ],
+
+    "max-nesting-depth": [
+      3,
+      { "ignore": ["blockless-at-rules"], "ignoreAtRules": ["media", "supports"] }
+    ],
+
+    "selector-max-id": 0,
+    "declaration-no-important": true,
+    "order/properties-alphabetical-order": true,
+
+    "scss/load-no-partial-leading-underscore": true,
+    "scss/dollar-variable-pattern": "^[_a-z][a-z0-9-]*$",
+    "scss/percent-placeholder-pattern": "^%[a-z0-9-]+$",
+    "scss/selector-no-redundant-nesting-selector": true
+  }
+}

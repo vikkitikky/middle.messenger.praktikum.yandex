@@ -1,20 +1,37 @@
-@use "../../../assets/styles/colors.scss" as *;
+@use '../../../assets/styles/colors.scss' as Colors;
+@use '../../../assets/styles/shadows.scss' as Shadows;
+@use '../../../assets/styles/radius.scss' as Radius;
 
 .input {
-  padding: 1rem;
-  border-radius: 0.375rem;
-  border: 1px solid $color-secondary-pink;
-  outline: none;
-  transition-property: border-color, box-shadow;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 0.15s;
-  box-sizing: border-box;
+  background-color: Colors.$color-background-main;
+  border: 1px solid Colors.$color-background-main;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  outline: 2px solid Colors.$color-transparent;
+  outline-offset: 2px;
+  padding: 0.5rem 1rem;
+  width: 100%;
 
-  &:hover {
-    border-color: $color-hover-secondary-pink;
+  @include Radius.round-1;
+  @include Shadows.inner-shadow;
+
+  &.error {
+    border-color: Colors.$color-error;
+  }
+}
+
+.input-error {
+  color: Colors.$color-error;
+  font-size: 12px;
+  margin-top: 4px;
+
+  &.hidden {
+    display: none;
   }
 
-  &:focus {
-    box-shadow: 0 0 1px 1px $color-active-secondary-pink;
+  &.visible {
+    display: block;
   }
 }

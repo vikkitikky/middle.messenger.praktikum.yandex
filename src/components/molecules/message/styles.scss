@@ -1,0 +1,36 @@
+@use '../../../assets/styles/shadows.scss' as Shadows;
+@use '../../../assets/styles/radius.scss' as Radius;
+
+.message {
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  margin: 0 1rem;
+  max-width: 60%;
+  padding: 8px 12px;
+
+  @include Radius.round-1;
+
+  &__time {
+    font-size: 0.8rem;
+    margin-top: 8px;
+  }
+
+  &_left {
+    border-bottom-left-radius: 0.275rem;
+    margin-right: auto;
+
+    @include Shadows.outer-shadow;
+  }
+
+  &_right {
+    border-bottom-right-radius: 0.275rem;
+    margin-left: auto;
+
+    @include Shadows.inner-shadow;
+
+    .message__time {
+      margin-left: auto;
+    }
+  }
+}

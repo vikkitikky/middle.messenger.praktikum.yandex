@@ -1,9 +1,39 @@
-.error-content {
-  gap: 16px;
-  align-items: center;
+@use '../../components/atoms/sphere/styles.scss' as Sphere;
+@use '../../assets/styles/colors.scss' as Colors;
 
-  .image_error {
-    width: 168px;
-    height: auto;
+.error-page {
+  display: grid;
+  grid-template: 1fr / 0.5fr 1fr 0.5fr;
+
+  .sphere-wrapper {
+    background-color: Colors.$color-transparent;
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    .sphere {
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &__title {
+    color: Colors.$color-background-main;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+
+  &__go-back {
+    pointer-events: initial;
   }
 }

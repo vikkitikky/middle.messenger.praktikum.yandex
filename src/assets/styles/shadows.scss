@@ -1,0 +1,13 @@
+@use './colors.scss' as Colors;
+
+@mixin outer-shadow($offset: 5px, $blur: 10px) {
+  box-shadow:
+    -#{$offset} -#{$offset} $blur Colors.$color-light-shadow,
+    #{$offset}  #{$offset} $blur Colors.$color-dark-shadow;
+}
+
+@mixin inner-shadow($offset: 5px, $blur: 10px) {
+  box-shadow:
+    inset -#{$offset} -#{$offset} $blur Colors.$color-light-shadow,
+    inset  #{$offset}  #{$offset} $blur Colors.$color-dark-shadow;
+}

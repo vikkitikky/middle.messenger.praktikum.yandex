@@ -1,36 +1,22 @@
-@use "../../../assets/styles/colors.scss" as *;
+@use '../../../assets/styles/colors.scss' as Colors;
+@use '../../../assets/styles/shadows.scss' as Shadows;
+@use '../../../assets/styles/radius.scss' as Radius;
 
 .btn {
-  border: none;
-  border-radius: 8px;
+  background-color: Colors.$color-accent-purple-half;
+  color: Colors.$color-background-main;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
 
-  &_medium {
-    padding: 12px;
+  @include Shadows.outer-shadow;
+  @include Radius.round-1;
+
+  &:hover {
+    background-color: Colors.$color-accent-purple;
   }
 
-  &_primary {
-    background-color: $color-primary-pink;
-    color: $color-white;
-
-    &:hover {
-      background-color: $color-hover-primary-pink;
-    }
-
-    &:active {
-      background-color: $color-active-primary-pink;
-    }
-  }
-
-  &_secondary {
-    background-color: $color-secondary-pink;
-    color: $color-primary-pink;
-
-    &:hover {
-      background-color: $color-hover-secondary-pink;
-    }
-
-    &:active {
-      background-color: $color-active-secondary-pink;
-    }
+  &_icon {
+    fill: Colors.$color-background-main;
   }
 }
